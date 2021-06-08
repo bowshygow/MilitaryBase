@@ -70,7 +70,7 @@ class VideoRecorder(
     private fun buildFile(): File? {
         val date = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault()).format(Date())
         val path =  Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)?.absolutePath +
-                "/TryOutFurniture/${date}_video.mp4"
+                "/MilitaryBase/${date}_video.mp4"
         val file = File(path)
         curPath = path
         val dir = file.parentFile
@@ -86,7 +86,7 @@ class VideoRecorder(
         val contentValues = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, "${date}_video.mp4")
             put(MediaStore.MediaColumns.MIME_TYPE, "video/mp4")
-            put(MediaStore.MediaColumns.RELATIVE_PATH, "Movies/TryOutFurniture")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, "Movies/MilitaryBase")
         }
         val uri = activity.contentResolver.insert(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, contentValues)
         return activity.contentResolver.openFileDescriptor(uri ?: return null, "w")?.fileDescriptor

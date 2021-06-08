@@ -24,7 +24,7 @@ class PhotoSaver(
     private fun generateFilename(): String? {
         val date = SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault()).format(Date())
         return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM)?.absolutePath +
-                "/TryOutFurniture/${date}_screenshot.jpg"
+                "/MilitaryBase/${date}_screenshot.jpg"
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -33,7 +33,7 @@ class PhotoSaver(
         val contentValues = ContentValues().apply {
             put(MediaStore.MediaColumns.DISPLAY_NAME, "${date}_screenshot.jpg")
             put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
-            put(MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/TryOutFurniture")
+            put(MediaStore.MediaColumns.RELATIVE_PATH, "DCIM/MilitaryBase")
         }
 
         val uri = activity.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
