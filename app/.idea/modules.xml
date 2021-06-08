@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1500541183/FurnitureTryOut.iml" filepath="$PROJECT_DIR$/.idea/modules/-1500541183/FurnitureTryOut.iml" group="FurnitureTryOut" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1139000834/MilitaryBase-FurnitureTryOut.iml" filepath="$PROJECT_DIR$/.idea/modules/1139000834/MilitaryBase-FurnitureTryOut.iml" group="FurnitureTryOut" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="FurnitureTryOut/app" />
+    </modules>
+  </component>
+</project>

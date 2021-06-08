@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+
+sceneform.asset(
+        'sampledata/models/Grenade.fbx',
+        'default',
+        'sampledata/models/Grenade.sfa',
+        'src/main/res/raw/Grenade'
+)
+sceneform.asset(
+        'sampledata/models/Shield.FBX',
+        'default',
+        'sampledata/models/Shield.sfa',
+        'src/main/res/raw/Shield'
+)
+sceneform.asset(
+        'sampledata/models/helmet.obj',
+        'default',
+        'sampledata/models/helmet.sfa',
+        'src/main/res/raw/helmet'
+)
+sceneform.asset(
+        'sampledata/models/Bazooka.obj',
+        'default',
+        'sampledata/models/bazooka.sfa',
+        'src/main/res/raw/bazooka'
+)
+sceneform.asset(
+        'sampledata/models/Karambit.fbx',
+        'default',
+        'sampledata/models/karambit.sfa',
+        'src/main/res/raw/karambit'
+)
+sceneform.asset(
+        'sampledata/models/M4A1.fbx',
+        'default',
+        'sampledata/models/m4a1.sfa',
+        'src/main/res/raw/m4a1'
+)
+sceneform.asset(
+        'sampledata/models/mk13.fbx',
+        'default',
+        'sampledata/models/mk13.sfa',
+        'src/main/res/raw/mk13'
+)
+sceneform.asset(
+        'sampledata/models/M9.obj',
+        'default',
+        'sampledata/models/m9.sfa',
+        'src/main/res/raw/m9'
+)
+
+
+
+sceneform.asset(
+        'sampledata/models/Bow.obj',
+        'default',
+        'sampledata/models/Bow.sfa',
+        'src/main/res/raw/Bow'
+)
+
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.androiddevs.furnituretryout"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.ar:core:1.16.0'
+
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+    implementation "com.google.ar.sceneform:animation:1.15.0"
+
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+}
